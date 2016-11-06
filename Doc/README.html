@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1>C语言程序执行顺序分析器</h1>
+
+<hr>
+
+<p>本文档主要介绍队伍在一周内完成的此次种子杯初赛试题的程序的实现方式以及实现原理等内容</p>
+
+<pre><code>队伍：Photon
+队员：李睿光 张铭 胡东明
+编译环境：Windows 10 64bit + Visual Studio 2015
+使用语言：C（主要）+ C++（少量使用了部分STL库中的类）
+</code></pre>
+
+<h2>目录</h2>
+
+<ul>
+<li><a href="#1">程序框架</a></li>
+<li><a href="#3">文件预处理/词法分析</a></li>
+<li><a href="#5">作用域-变量</a></li>
+<li><a href="#9">计算器</a></li>
+<li><a href="#12">顺序结构</a></li>
+<li><a href="#13">分支结构</a></li>
+<li><a href="#15">循环结构</a></li>
+</ul>
+
+<h2>关键点</h2>
+
+<ul>
+<li><a href="#2">语句块嵌套</a></li>
+<li><a href="#4">词法分析</a></li>
+<li><a href="#6">变量同名与覆盖</a></li>
+<li><a href="#7">break</a></li>
+<li><a href="#10">运算表达式转换</a></li>
+<li><a href="#11">逆波兰表达式</a></li>
+<li><a href="#14">分支结构预处理</a></li>
+<li><a href="#15">循环结构关键点</a></li>
+</ul>
+
+<p><a name="1"></a></p><a name="1">
+
+<h2>程序框架</h2>
+
+</a><p><a name="1"></a></p>
+
+<h3>程序模块</h3>
+
+<p><strong>程序主要分为以下几个模块：</strong></p>
+
+<ul>
+<li>预处理程序源文件 (PreDeal)</li>
+<li>建立作用域-变量存储结构 (VarScope)</li>
+<li>四则/条件运算计算器 (Calculator)</li>
+<li>顺序结构模块（函数） (Process-Order)</li>
+<li>分支结构模块（函数） (Process-Branch)</li>
+<li>循环结构模块 （函数） (Process-Loop)</li>
+</ul>
+
+<div class="highlight highlight-source-c++"><pre>PreDeal.cpp
+<span class="pl-k">void</span> <span class="pl-en">PreDeal</span>(<span class="pl-k">void</span>);\\进行文件预处理，生成.tmp临时文件
+
+VarScope.cpp
+<span class="pl-k">inline</span> <span class="pl-k">void</span> <span class="pl-en">Push_Scope</span>(<span class="pl-k">char</span> *scope_name);\\作用域入栈
+<span class="pl-k">inline</span> <span class="pl-k">void</span> <span class="pl-en">Pop_Scope</span>(<span class="pl-k">void</span>);\\作用域出栈
+<span class="pl-k">void</span> <span class="pl-en">Push_Var</span>(<span class="pl-k">char</span> *var_name, <span class="pl-k">int</span> var_value);\\存储新变量
+<span class="pl-k">int</span> <span class="pl-en">Get_Var</span>(<span class="pl-k">char</span> *var_name);\\获取变量值
+<span class="pl-k">void</span> <span class="pl-en">Set_Var</span>(<span class="pl-k">char</span> *var_name, <span class="pl-k">int</span> var_value);\\改变变量值
+
+Calculator.cpp
+<span class="pl-k">int</span> <span class="pl-en">Calculator</span>(<span class="pl-k">char</span> *string_in);\\计算传入表达式，返回值
+
+Process.cpp
+<span class="pl-k">void</span> <span class="pl-en">Order</span>(<span class="pl-k">void</span>);\\处理顺序结构
+<span class="pl-k">void</span> <span class="pl-en">Branch</span>(<span class="pl-k">void</span>);\\处理循环结构
+<span class="pl-k">void</span> <span class="pl-en">Loop</span>(<span class="pl-k">void</span>);\\处理分支结构</pre></div>
+
+<h3>程序主逻辑</h3>
+
+<ol>
+<li>进行文件预处理，生成中间临时文件；</li>
+<li>主程序以调用顺序结构模块开始，读取中间临时文件；</li>
+<li>若调用顺序结构模块：若读取分支结构关键字，调用分支结构模块；若读取循环结构关键字，调用循环结构模块；若读取其他关键字，执行相应操作、打印行号；</li>
+<li>若调用分支结构模块：判断条件，跳转对应块开头，调用顺序结构模块；</li>
+<li>若调用循环结构模块：判断条件，调用顺序结构模块或结束循环。</li>
+</ol>
+
+<p><a href="Pics/01.png" target="_blank"><img src="Pics/01.png" alt="程序逻辑" style="max-width:100%;"></a></p>
+
+<p><a name="2"></a></p>
+
+<p>  通过这样的模块函数的相互调用，有效地解决了<strong>语句块嵌套</strong>的问题。<br>
+  程序功能的主要实现方法如图所示，通过三个模块函数的相互调用，重构源程序的逻辑，即整个源代码、所有的语句块都通过顺序函数来进入并处理，执行相应操作（定义变量、赋值、运算、打印行号等），当遇到对应关键字，调用分支函数或循环函数，在判断条件表达式后，执行相应操作（语句块位置跳转），随后调用顺序函数进入语句块执行操作，这样重复地进行。</p>
+
+<p><a name="3"></a></p><a name="3">
+
+<h2>文件预处理/词法分析</h2>
+
+</a><p><a name="3"></a></p>
+
+<pre><code>该部分在提交的源代码的PreDeal.cpp中。
+</code></pre>
+
+<p>文件预处理部分，每次读取源文件一行的内容，在行内处理字符，执行相应操作。<br>
+主要完成了以下工作：</p>
+
+<p><a name="4"></a></p>
+
+<h4>处理注释</h4>
+
+<p>删除注释，遇到行内注释("//")直接跳过该行剩余部分，整行注释(块注释"/**/"内部或整行"//")加空行保证行号不变</p>
+
+<h4>语句分行</h4>
+
+<p>将行内的多条语句分成多行，即处理完后每一行只有一条语句</p>
+
+<h4>词法分析</h4>
+
+<p>词法分析，将关键字、变量名、字符串、运算符、其它特殊符号等通过前后加空格的方式分开</p>
+
+<h4>行号映射</h4>
+
+<p>设置全局变量(vector&lt;int&gt; LINE)存储临时文件-原始文件的行号映射，便于对临时文件进行处理时查找原始文件行号</p>
+
+<p><em>具体预处理效果请参见.tmp文件</em></p>
+
+<p><a name="5"></a></p><a name="5">
+
+<h2>作用域-变量</h2>
+
+</a><p><a name="5"></a></p>
+
+<pre><code>该部分在提交的源代码的VarScope.cpp中
+</code></pre>
+
+<p>  提交程序采用的保存作用域与对应变量键值对的方式为建立了作用域与变量对应的十字链表。<br>
+  主链表存储结构为双向链表，逻辑结构为栈，即采用了链栈。结点为作用域结点，数据域保存了作用域名称（Order、Branch、Loop），指针域分别是指向当前作用域下变量链的指针（var）,指向前驱作用域结点的指针（prior）和指向后继作用域结点的指针（next）。<br>
+  由于作用域的进入退出符合栈的后进先出规则，故在上述基础上采用栈的操作方式。进入语句块后，将该作用域压栈，新建结点，栈顶指针（CUR_SCOPE）指向当前作用域；退出语句块后，当前作用域出栈，栈顶指针指向上一个作用域。</p>
+
+<p><a href="Pics/02.png" target="_blank"><img src="Pics/02.png" alt="作用域变量" style="max-width:100%;"></a></p>
+
+<p><a name="6"></a></p>
+
+<h4>变量同名与覆盖</h4>
+
+<p>  在VarScope.cpp中实现了几个对变量操作的函数，分别是：</p>
+
+<ul>
+<li>Push_Var：将新声明的变量存入一个新建结点，挂在当前作用域结点的变量子链表的尾部</li>
+<li>Get_Var：根据变量名在十字链表中查找该变量名对应的值，查找的规则是从当前作用域的变量子链开始查找，依次向上层作用域结点查找，返回查找到的变量名对应的值；</li>
+<li>Set_Var：查找原理与Get_Var相同，查找到以后将结点中变量的值更新为给定的新值。</li>
+</ul>
+
+<p>  根据上述查找规则，若内层作用域声明了与外层作用域同名的变量，则查找时会先查找到内层作用域的变量，并返回值或进行修改，并不会影响到外层作用域的该同名变量的值；当退出内层作用域后，作用域栈顶出栈，栈顶指针（即当前作用域指针）指向上一层作用域，此时便不会再访问到已经退出的作用域及其内部变量。</p>
+
+<p><a name="7"></a></p>
+
+<p><a name="8"></a></p>
+
+<h4>break</h4>
+
+<p>  break语句的判断是在顺序模块函数内部进行，但其实现原理是通过这里的作用域-变量十字链表结构实现。</p>
+
+<p>实现方式：<br>
+1. 设置了一个break_flag全局变量，初值为0；<br>
+2. 当遇到break，break_flag置为1，判断当前栈顶作用域：</p>
+
+<ul>
+<li>若为Loop，则首先跳出Order层（在Order()函数中直接返回），接着跳出Loop层(紧接着Order()调用语句后，判断break_flag为真，函数返回)，顶层作用域出栈，break_flag置为0，继续顺序执行；</li>
+<li>若为Branch，跳出Branch层和Order层，标志位不变，重复进行第二步。</li>
+</ul>
+
+<p><a name="9"></a></p><a name="9">
+
+<h2>计算器</h2>
+
+</a><p><a name="9"></a></p>
+
+<pre><code>该部分为Calculator.cpp文件内所有内容
+
+实现说明：可计算程序中所有合法且规范的表达式的值并返回该值。
+</code></pre>
+
+<p>总体算法思想为将表达式转换成逆波兰表达式，再求逆波兰式的值。其中表达式可能含有变量名，'++','--'和所有比较运算符，这些都不是能直接求出逆波兰表达式的，所以需要对表达式进行转换得到目标表达式，再求目标表达式的逆波兰式，最后计算出值。</p>
+
+<p><a name="10"></a></p>
+
+<h3>表达式转换</h3>
+
+<p>该部分实现将原表达式转换成目标表达式，如</p>
+
+<pre><code>int i = -3；
+int t = -5；
+int j = i++ + 4*i - 9/3 &lt;= i - t*3 + 15/t;
+</code></pre>
+
+<p>这样经过转换之后即可得到目标表达式有三个："0-3"，"0-5"，"0 - 3 - 4 * 3 - 9 / 3 &lt;= 0 - 3 + 5 * 3 - 15 / 5"。</p>
+
+<p>这里需要对转换目标表达式的函数做几点说明：</p>
+
+<ol>
+<li><p>可以处理表达式内的<strong>不加括号的负数或正数</strong>，即能处理“ 1 * - 9 ”和“ 1 * + 9 ”计算分别得到 - 9 和 9 。当然更复杂的情况也能处理正确。</p></li>
+<li><p>表达式开头若有'-'，则生成的目标表达式以“0”开头，否则以“0+”开头，这样处理是为了能方便生成正确的逆波兰表达式。若遇到变量为负值，则看其前面的运算符是'+','-','*','/'中的哪一个，再根据正负得负，负负得正的原则处理四则运算，如：p为-2，遇到了“ - 3 + p ”，那么目标表达式就是“ - 3 - 2 ”；若为“ - 3 - p ”，则目标表达式为“ - 3 + 2 ”；若为“ * p ”,则判断‘ * ’前面是‘ + ’还是‘ - ’，举例中为‘ - ’，则转换成“ + 3 * 2 ”;' / '的处理同‘ * ’。经过在目标表达式在前述的处理加上“ 0 ”或“ 0 + ”后，变量名前一定会有' + '或者' - '。这样更能方便处理。</p></li>
+<li><p>若处理到了自增/自减运算符，目标表达式会跳过这些运算符，在Exp_Input函数中单独处理变量值的增减。</p></li>
+<li><p>若处理到了比较运算符，则比较运算右边的子表达式的处理同（2）</p></li>
+<li><p>对于变量名的处理，是通过变量树返回其值，再通过itoa函数返回其字符串形式，用指针指向该值的字符串，再逐字符处理</p></li>
+<li><p>本部分可能不能将所有实现细节一一叙述详尽，裁判组对实现过程有疑问可看源码，源码有详细注释</p></li>
+</ol>
+
+<p><a name="11"></a></p>
+
+<h3>生成逆波兰表达式并计算其值</h3>
+
+<p>程序内部指定将' &lt;= ',' &gt;= ',' != ',' == '在处理时分别用' @ '，' # '，' $ ',' % '代替压栈从而优化处理</p>
+
+<p>基本算法如下：</p>
+
+<ol>
+<li><p>将目标表达式压栈，得到其后缀表达式，其中需要考虑' &lt;= ',' &gt;= ',' != ',' == '的转换的问题和运算符优先级问题。</p></li>
+<li><p>计算后缀表达式，返回表达式的值，为整型。程序内规定若<strong>比较运算</strong>结果为真则返回1，为假则返回0。</p></li>
+</ol>
+
+<p>上述的三个表达式的逆波兰表达式分别为</p>
+
+<pre><code>0 3 -
+0 5 -
+0 3 - 4 3 * - 9 3 / - 0 3 - 5 3 * + 15 5 / - @
+</code></pre>
+
+<p>其中使用' @ '代替' &lt;= '入栈，优化处理</p>
+
+<p>上述逆波兰表达式输出值为</p>
+
+<pre><code>-3
+-5
+1
+</code></pre>
+
+<h3>程序设计亮点</h3>
+
+<ol>
+<li><p>转换原表达式为目标表达式的过程中给目标表达式开头或者比较运算符右边表达式加" 0 "或者" 0 - "，这样使得每个单目运算符均有左右操作数,能方便构成逆波兰表达式，否则"- 9 + 4 "不方便进栈，因为开头负号没有左操作数，加上'0'则开头负号有左操作数，方便进栈。再考虑" p + 4",加上" 0 + "之后,若ｐ是负数，则目标表达式变成"0 - |p| ",若为正数则为"0 + p"。</p></li>
+<li><p>四则运算的正负得负，负负得正的实现，见上述给出的代码示例</p></li>
+<li><p>生成逆波兰表达式。根据目标表达式运算符的优先级，设计数字栈和运算符栈，压栈时遇到数字字符直接压栈，遇到运算符需要比较运算符栈栈顶运算符的优先级，栈顶运算符优先级不应该低于将要压栈的运算符，否则一直出栈到栈顶运算符优先级高于（不含等于）将要压栈的运算符。</p></li>
+<li><p>处理逆波兰表达式。对逆波兰表达式压栈，根据（1），每个运算符都是有左右操作数的，这样遇到运算符，则一定可以出栈左右操作数并计算。</p></li>
+<li><p>为了使生成目标表达式过程时间复杂度和空间复杂度降低，代码可读性增强，计算器内单独处理表达式中变量自增自减的情况</p></li>
+</ol>
+
+<p><a name="12"></a></p><a name="12">
+
+<h2>顺序结构</h2>
+
+</a><p><a name="12"></a></p>
+
+<pre><code>该部分在提交的源代码中的Process.cpp中的Order()函数中实现
+</code></pre>
+
+<p>  顺序结构处理经过预处理源代码文件得到的中间临时文件.tmp，是程序的主要处理模块。该模块中主要进行的工作为：关键字识别、变量名提取、保存/更新变量键-值对。</p>
+
+<h3>关键字识别</h3>
+
+<p>本题中，需要判断的关键字为：</p>
+
+<ul>
+<li>
+<strong>int</strong>：变量声明标识符，需要提取变量名，将表达式送入计算器求值，然后存入作用域-变量结构中，打印行号；</li>
+<li>
+<strong>if</strong>：遇到分支结构，调用Branch()；</li>
+<li>
+<strong>for</strong>：遇到循环结构，调用Loop()；</li>
+<li>
+<strong>while</strong>：同上</li>
+<li>
+<strong>do</strong>：同上</li>
+<li>
+<strong>printf</strong>：输出语句，需要提取小括号内字符串后面的所有表达式并求值（可能出现自增自减等改变变量值的表达式），打印行号；</li>
+<li>
+<strong>{</strong>：块开始，说明当前块不止一条语句，遇到右大括号或文件尾结束；</li>
+<li>
+<strong>}</strong>：块结束，返回；</li>
+<li>
+<strong>break</strong>：需要跳出当前循环，具体实现见<a href="#16">break</a>。</li>
+</ul>
+
+<h3>变量名提取</h3>
+
+<p>由于预处理中添加的空格已经将变量名和其他字符隔开，直接提取int后、等号（若不赋值为逗号、分号）之间的字符串即可</p>
+
+<h3>保存/更新变量键值对</h3>
+
+<p>变量名提取中获得变量名，提取等号和逗号或分号之间的表达式送入计算器求得变量值，调用Push_Var/Set_Var(var_name,var_value)即可</p>
+
+<p><a name="13"></a></p><a name="13">
+
+<h2>分支结构</h2>
+
+</a><p><a name="13"></a></p>
+
+<pre><code>该部分在提交的源代码中的Process.cpp中的Branch()函数中实现
+</code></pre>
+
+<p><strong>实现说明：</strong>赛题文档中关于分支结构的条件判断均有左右大括号，我们额外实现了对于if/else if/else后面不加大括号的情况，但只限后跟一条语句</p>
+
+<p>  <strong>Branch()</strong>和Order()形成<strong>相互调用</strong>，在程序中遇到if即调用Branch，Branch内需要预处理当前层的分支结构，即记录该层的分支结构每个条件块的结束行号和结束行的文件指针所指的位置，预处理结束后需要判断进入哪个条件语句块，处理完后返回顺序结构。</p>
+
+<p><a name="14"></a></p>
+
+<h3>预处理分支结构</h3>
+
+<pre><code>理解说明：由递归思想，分支结构中存在嵌套，故遇到分支结构，均以当前层分支结构理解
+</code></pre>
+
+<p>处理过程及算法如下：</p>
+
+<div class="highlight highlight-source-c++"><pre><span class="pl-k">typedef</span> <span class="pl-k">struct</span> <span class="pl-en">END</span>
+{
+    <span class="pl-k">long</span> end_line;<span class="pl-c">//存储文件指针位置，即可通过ftell()函数获取该文件指针相对于文件首部的偏移量</span>
+    <span class="pl-k">int</span> end_line_num;<span class="pl-c">//存储执行行的行数</span>
+}END;</pre></div>
+
+<ol>
+<li><p>设立<strong>brace</strong>表示大括号数量，<strong>has_brace</strong>表示分支块中是否有大括号。设计<strong>结构变量 END</strong>存储特定行的行数和改行文件指针位置也即相对于文件首部的偏移量，设立该结构变量类型的<strong>队列 end</strong>。</p></li>
+<li><p>初始化brace和has_brace为0。</p></li>
+<li><p>if/else if/else下不只一条语句则会有大括号括起来，在程序内规定条件块的结束语句位置为if/else if/else后：若有大括号，则指向最后一个' } '，若只有一条语句，则指向该语句。</p></li>
+<li><p>如果当前分支结构中有大括号，则一定会在读非空行的一开始就会遇到' { '，则brace++，并且has_brace记为1。遇到' } '则brace--，利用左右大括号数目的对称性，在遇到当前层的条件语句块结束时，即遇到最后一个' } '，brace值一定为0，这时需要记录在.tmp中此行的行数和文件指针的位置到结构类型中并将其入队列。并且将has_brace重置为0后break。</p></li>
+<li><p>如果当前分支结构中没有大括号，则会进入has_brace为0的判断，这时和（3）类似，需要记录在.tmp中此行的行数和文件指针的位置到结构类型中并将其入队列。并且将has_brace重置为0后break。</p></li>
+<li><p>处理完一个语句块后读下一行内容，跳过.tmp文件中的空行。因为else if和else均含有else，故sscanf读进字符串但无法匹配到else，则说明当前分支块结束</p></li>
+<li><p>预处理结束后，队列中从第一个元素开始到最后一个元素分别记录了不同条件语句的结束位置，其中特别的是最后一个元素是当前分支的结束语句位置。</p></li>
+</ol>
+
+<h3>判断该进入分支语句块</h3>
+
+<p>预处理结束后，<strong>恢复初始文件指针位置和行数</strong>。再进入判断模块，即判断进入哪一个条件语句块，并处理break语句，完成条件语句块后须跳出当前分支块</p>
+
+<p>处理过程及算法如下：</p>
+
+<ol>
+<li><p>使用sscanf取出当前行的字符串，跳过空行并且在sscanf函数的format参数中用一句<strong>正则表达式（只字符串形式的正则表达式，未使用库函数）</strong>取出if或者else if括号内的表达式，调用计算器函数处理得到结果</p></li>
+<li><p>判断结果是否为真，如果为真，递归调用Order，Order执行完将队列最后一个结构变量出队，这样就得到了整个分支的末行，因为一旦某个条件判断通过了，其后续条件判断都不用判断了。如果调用计算器得到的结果为假，则将队列头部出队，这样就得到了下一个条件判断的末行位置。</p></li>
+<li><p><strong>对于break的处理</strong>，在Order中已经处理过break，遇到break，则break_flag置为1，这样到Branch里遇到了break，直接将队列尾部结构变量出队，再将当前行指向该结构变量的行号，并且该结构变量的文件位置值赋值给全局文件指针。这样与Order()顺序结构处理函数的递归调用可以很好地处理分支结构，因为都是在本层的分支结构处理。</p></li>
+</ol>
+
+<h3>程序设计亮点</h3>
+
+<p>前文已说明下列功能的实现原理，此处只列举，不再赘述</p>
+
+<ol>
+<li><p>分支结构的预处理</p></li>
+<li><p>使用队列保存当前分支结构每个条件块的结束信息，包括行数和文件指针偏移量</p></li>
+<li><p>brace的使用，判断左右大括号的个数</p></li>
+<li><p>has_brace，用于处理省略大括号的条件语句</p></li>
+<li><p>对于break的特殊处理</p></li>
+<li><p>与顺序结构的处理函数Order的相互递归调用</p></li>
+</ol>
+
+<p><a name="15"></a></p><a name="15">
+
+<h2>循环结构</h2>
+
+</a><p><a name="15"></a></p>
+
+<pre><code>该部分在提交的源代码中的Process.cpp中的Loop()函数中实现
+</code></pre>
+
+<ul>
+<li><a href="#16">循环接口函数：void Loop(void)</a></li>
+<li><a href="#17">Fpr循环处理函数：void ForFunction(void)</a></li>
+<li><a href="#18">While循环处理函数：void WhileFunction(void)</a></li>
+<li><a href="#19">Do循环处理函数：void DoFunction(void)</a></li>
+<li><a href="#20">关键点解释</a></li>
+</ul>
+
+<p><a name="16"></a></p>
+
+<h3>处理循环的接口函数：void Loop(void)</h3>
+
+<h5>函数功能</h5>
+
+<ul>
+<li>判断当前当前循环是 <strong>for</strong>循环，还是<strong>while</strong>循环，还是<strong>do while</strong> 循环。给根据不同的关键字进入不同的函数。</li>
+</ul>
+
+<h5>函数逻辑</h5>
+
+<ul>
+<li>取出当前行的第一个单词<strong>keyword</strong>
+</li>
+<li>将<strong>keyword</strong>与<strong>"for"</strong>、<strong>"do"</strong>、<strong>"while"</strong>对比，从而进入可以处理相应循环结构的函数</li>
+</ul>
+
+<h5>流程示意图</h5>
+
+<p><a href="Pics/Loop.png" target="_blank"><img src="Pics/Loop.png" alt="函数流程图" style="max-width:100%;"></a></p>
+
+<p><a name="17"></a></p>
+
+<h3>处理for循环的函数：void ForFunction(void)</h3>
+
+<h5>函数逻辑</h5>
+
+<ol>
+<li>预处理，确定 for循环 开头所在的行号 <em>startLine</em>、文件指针 <em>startPosition</em> 和 for循环 结尾所在的行号 <em>endLine</em>、文件指针 <em>endPosition</em>。</li>
+<li>若是第一次进入 for函数 , 则处理 "for(...;...;...)" 中第一个 ';' 前的语句；否则，直接进入 3 。</li>
+<li>打印 "for(...;...;...)" 这一行的行号。</li>
+<li>处理 "for(...;...;...)" 中第一个 ';' 到第二个 ';' 之间的布尔表达式。 若该布尔表达式为假，则跳到 for循环 最后一行（endLine），并使文件指针指向 for循环 最后一行（endPosition）。</li>
+<li>调用顺序函数 order（） 处理循环体，之后跳转至 <em>startLine</em> 处理 "for(...;...;...)"中第二个 ';' 到第三个 ';' 之间的语句。再进入 2。</li>
+</ol>
+
+<h5>流程示意图</h5>
+
+<p><a href="Pics/ForFunction.png" target="_blank"><img src="Pics/ForFunction.png" alt="函数流程图" style="max-width:100%;"></a></p>
+
+<h5>支持的功能</h5>
+
+<ul>
+<li>for(expression1; 条件表达式; expression2): 其中，expression1 与 expression2 可含多个表达式</li>
+<li>for(...; ...; ...); ("..."内的内容为表达式)： 支持for循环后直接加 ";"</li>
+<li>for(;;)：支持 for循环 "()" 里面表达式全为空</li>
+<li>for(...; expression; ...)(expression为表达式) : 支持 expression 为非比较表达式或为空</li>
+<li>支持多层循环嵌套， 支持与 if-else 结合的嵌套</li>
+<li>支持 break</li>
+<li>支持 while(...) 后不加大括号，只有<strong>一行</strong>语句。 但 <strong>不支持 for(...; ...; ...) 后不加大括号，不止一行语句</strong> (比如说那一行语句为if-else表达式).代码示意：</li>
+</ul>
+
+<div class="highlight highlight-source-c"><pre><span class="pl-c">//支持:</span>
+    <span class="pl-k">for</span>(...; ...; ...)
+        <span class="pl-en">printf</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-c1">%d</span><span class="pl-pds">"</span></span>, i);   <span class="pl-c">//无大括号，只有一行</span>
+<span class="pl-c">//不支持:</span>
+    <span class="pl-k">for</span>(...; ...; ...)  
+        <span class="pl-k">if</span>(...){           <span class="pl-c">//无大括号，但有多行</span>
+            ...
+        }
+        <span class="pl-k">else</span>{
+            ...
+        }</pre></div>
+
+<p><a name="18"></a></p>
+
+<h3>处理while循环的函数：void WhileFunction(void)</h3>
+
+<h5>函数逻辑</h5>
+
+<ul>
+<li>预处理：先遍历一遍 while函数， 从而确定 while函数 的结束时的行号和对应的文件指针位置。</li>
+<li>处理 "while()" 中 "()" 里面的表达式。</li>
+<li>打印 while() 这一行的行号。</li>
+<li>若条件成立，调用顺序处理函数 Order() 函数处理循环体里面的语句。</li>
+<li>若条件不成立，让行数和文件指针指向 while 循环结束的位置，函数结束。</li>
+</ul>
+
+<h5>支持的功能</h5>
+
+<ul>
+<li>while(expression)，其中 expression 可为多个表达式，用逗号分开的复合表达式</li>
+<li>while(expression)，其中 expression 可为 "1"、变量名等这一类的表达式</li>
+<li>支持多层循环嵌套， 支持与 if-else 结合的嵌套</li>
+<li>支持 break</li>
+<li>支持 while(...) 后不加大括号，只有<strong>一行</strong>语句。 但 <strong>不支持 for(...; ...; ...) 后不加大括号，不止一行语句</strong> (比如说那一行语句为if-else表达式)。</li>
+</ul>
+
+<p><a name="19"></a></p>
+
+<h3>处理do..while循环的函数：void DoFunction(void)</h3>
+
+<h5>函数逻辑</h5>
+
+<ul>
+<li>预处理：先遍历一遍 do-while 函数， 从而确定 do-while 函数 的结束时的行号和对应的文件指针位置。</li>
+<li>调用顺序函数 Order() 处理循环体里的语句。</li>
+<li>处理 "while()" 中 "()" 里面的表达式。</li>
+<li>打印 while() 这一行的行号。</li>
+<li>若条件成立，让行数和文件指针指向 do-while 循环开始的位置。</li>
+<li>若条件不成立，让行数和文件指针指向 do-while 循环结束的位置，函数结束。</li>
+</ul>
+
+<h5>支持的功能</h5>
+
+<ul>
+<li>while(expression)，其中 expression 可为多个表达式，用逗号分开的复合表达式</li>
+<li>while(expression)，其中 expression 可为 "1"、变量名等这一类的表达式</li>
+<li>支持 do 到 while 之间只有一行语句，但没有大括号。代码说明：</li>
+</ul>
+
+<div class="highlight highlight-source-c++"><pre><span class="pl-c">//支持</span>
+<span class="pl-k">do</span>
+    i++;
+<span class="pl-k">while</span>(i &lt; <span class="pl-c1">5</span>)
+
+<span class="pl-c">//不支持</span>
+<span class="pl-k">do</span>
+    <span class="pl-k">if</span>(i &lt; <span class="pl-c1">0</span>)
+        <span class="pl-k">break</span>;
+<span class="pl-k">while</span>(i++, i&lt;<span class="pl-c1">5</span>)</pre></div>
+
+<p><a name="20"></a></p>
+
+<h3>关键点解释</h3>
+
+<h5>1. 循环体中间如何处理</h5>
+
+<p>在处理完 <strong>"for(..;..;..)"</strong> 这一部分后，若for循环的条件成立，则直接调用顺序执行函数 <strong>Order()</strong> ， 若条件不成立，则直接跳到for循环的最后一行。</p>
+
+<h5>2. 确定循环函数的开始和结束的行号和文件指针位置。</h5>
+
+<ul>
+<li>由进入ForFunction(),  WhileFuction(), DoFunction() 的行号和文件指针位置确定函数开始的行号和文件指针位置</li>
+<li>通过大括号匹配遍历整个循环函数，从而确定函数结束位置的行号和文件指针位置</li>
+</ul>
+
+<h5>3. 处理 "while(...)" 内的表达式</h5>
+
+<p><em>流程示意图:</em><br>
+<a href="Pics/Keypoint.png" target="_blank"><img src="Pics/Keypoint.png" alt="循环关键点" style="max-width:100%;"></a></p>
+
+<h5>4. 跳出循环后如何定位到最后一行</h5>
+
+<p><em>代码示意:</em></p>
+
+<div class="highlight highlight-source-c++"><pre>CUR_LINE = endLine;             <span class="pl-c">//将行数定位到最后一行</span>
+<span class="pl-en">fseek</span>(PFILE, endPosition, <span class="pl-c1">0</span>);   <span class="pl-c">//将文件指针定位到最后一行</span>
+<span class="pl-k">return</span>;</pre></div>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

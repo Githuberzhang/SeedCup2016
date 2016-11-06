@@ -1,0 +1,11 @@
+﻿  Calculator.cpp
+d:\visualstudio2015project\seedcup2016\seedcup2016\calculator.cpp(71): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: 参见“sscanf”的声明
+d:\visualstudio2015project\seedcup2016\seedcup2016\calculator.cpp(77): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: 参见“sscanf”的声明
+d:\visualstudio2015project\seedcup2016\seedcup2016\calculator.cpp(252): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: 参见“sscanf”的声明
+d:\visualstudio2015project\seedcup2016\seedcup2016\calculator.cpp(253): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: 参见“itoa”的声明
+  SeedCup2016.vcxproj -> D:\VisualStudio2015Project\SeedCup2016\Debug\SeedCup2016.exe
+  SeedCup2016.vcxproj -> D:\VisualStudio2015Project\SeedCup2016\Debug\SeedCup2016.pdb (Full PDB)
